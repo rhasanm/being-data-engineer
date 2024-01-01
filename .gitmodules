@@ -1,0 +1,3 @@
+[submodule "website/themes/whiteplain"]
+	path = website/themes/whiteplain
+	url = https://github.com/taikii/whiteplain.git
