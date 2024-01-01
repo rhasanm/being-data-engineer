@@ -1,4 +1,4 @@
-baseurl = "http://localhost:1313"
+baseurl = "https://rhasanm.github.io/being-data-engineer"
 title = "Being Data Engineer"
 theme = "whiteplain"
 languageCode = "en"
