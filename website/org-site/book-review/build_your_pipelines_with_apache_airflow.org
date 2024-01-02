@@ -1,0 +1,7 @@
+#+title: Build your pipelines with Apache Airflow
+#+description: Book Review - Build your pipelines with Apache Airflow
+#+author: r_hasan
+#+date:<2024-01-02 Tue> 
+#+hugo_base_dir: ../../
+
+* Hello All
