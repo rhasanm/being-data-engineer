@@ -113,3 +113,10 @@ The two of the most important properties of proper Airflow tasks are atomicity a
 
 
 ## Chapter 9: Testing {#chapter-9-testing}
+
+-   Types of testing:
+    -   acceptance
+    -   integration
+    -   unit
+
+From the above this book covers the integration and unit testing, and pytest as testing framework.

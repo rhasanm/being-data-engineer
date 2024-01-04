@@ -87,3 +87,10 @@ final_task >> email_sending_task
 ** Sharing Data between tasks
 
 * Chapter 9: Testing
+- Types of testing:
+  - acceptance
+  - integration
+  - unit
+
+
+From the above this book covers the integration and unit testing, and pytest as testing framework.
