@@ -54,8 +54,45 @@ Spark's design philosophy centers around four key characteristics:
 
 We use APIs to write spark application and spark converts this into a DAG that is executed by the core engine.
 
+Spark's components:
+
+-   **driver**: the orchestrator, orchestrates paraller operations on the cluster. Access the distributed components (cluster manager and spark executor) through a SparkSession.
+
+    Key responsibilites:
+
+    -   instantiating a SparkSession
+    -   communicates with the cluster manager
+    -   requests resoureces from the cluster manager for executors
+    -   transforms all the spark operations into DAG computations, schedules them
+    -   distributes their execution as tasks across the spark executors.
+    -   communicates directly with the executors (after resoureces are allocated)
+-   **SparkSession**:
+
+    Not only did it subsume previous entry points to Spark like the SparkContext, SQLContext, HiveContext, SparkConf, and StreamingContext, but it also made working with Spark simpler and easier.
+
+-   **Cluster Manager**:
+
+    responsible for managing and allocationg resources. Currently supports standalone, yarn, mesos and kubernetes.
+
+-   **Spark Executors**:
+
+    runs on each worker node. In most deployment mode, only a single executor runs per node.
+
+**Deployment Modes**: local, standalone, yarn(client), yarn(cluster), kubernetes.
+
+
+### Distributed data and partitions {#distributed-data-and-partitions}
+
+Though this is not always possible, each Spark executor is preferably allocated a task that requires it to read the partition closest to it in the network, observing data locality.
+
+Partitioning allows for efficient parallelism. A distributed scheme of breaking up data into chunks or partitions allows Spark executors to process only data that is close to them, minimizing network bandwidth.
+
 
 ### The WH Questions {#the-wh-questions}
+
+-   what is apache spark?
+-   how all the components of Spark’s distributed architecture work together and communicate?
+-   what deployment modes are available?
 
 
 ## Chapter 2, Downloading Apache Spark and Getting Started {#chapter-2-downloading-apache-spark-and-getting-started}
