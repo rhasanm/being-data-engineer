@@ -1,0 +1,82 @@
++++
+title = "Learning Spark: Lightning-Fast Data Analytics"
+author = ["r_hasan"]
+description = "Book Review - Build your pipelines with Apache Airflow"
+date = 2024-01-05T00:00:00+00:00
+draft = false
++++
+
+> ******data engineers****** will learn how to use **Spark’s Structured APIs** to perform
+> complex data exploration and analysis on both batch and streaming data; use **Spark
+> SQL** for interactive queries; use Spark’s built-in and external **data sources** to read,
+> refine, and write data in different file formats as part of their extract, transform, and
+> load (ETL) tasks; and build reliable data lakes with Spark and the open source **Delta
+> Lake table format**.
+>
+> for ******data scientists and machine learning engineers******, Spark’s **MLlib library** offers many
+> common algorithms to build distributed machine learning models. This book covers
+> how to build pipelines with MLlib, best practices for distributed machine learning, how to use Spark to scale single-node models, and how to manage and deploy these models using the open source library **MLflow**.
+
+
+## Chapter 1, Introduction to Apache Spark: A Unified Analytics Engine {#chapter-1-introduction-to-apache-spark-a-unified-analytics-engine}
+
+> 1.  A Unified Analytics Engine
+> 2.  It's genesis, inspiration and adoption
+
+**Keywords**: GFS, MapReduce, BigTable, data locality, cluster rack affinity
+
+This chapter talks about the main components of the spark project and spark's distributed architecture.
+
+The background goes like: Google at it's urgency to handle large volume of data had introduced the Google File System (GFS), MapReduce, BigTable. Taking inspiration from their published papers yahoo engineers came up with Hadoop File System and donated this to Apache. The shortcomings of MapReduce which are 1. hard to manage and administer with operational complexity 2. It's verbose API and lot of boilerplate setup code and 3. Intermediate computed results stored on the local disk affecting performance. To handle these engineers developed bespoke systems (Apache Hive, Apache Strom, Apache Impala, Apache Giraph, Apache Drill, Apache Malhout etc.). But all of them had their own learning curve with operational complexity. So Spark was introduced.
+
+Apache Hadoop Framework: Hadoop Common, MapReduce, HDFS, and Apache Hadoop YARN.
+
+> Simple things should be simple, complex things should be possible -- Alan Kay
+
+Spark's design philosophy centers around four key characteristics:
+
+1.  Speed
+
+    Spark pursued this by
+
+    -   Todays servers come cheap
+    -   Spark builds it's query computations as DAG. The DAG schedular and query optimizer constructs effective computational graph
+    -   Tungsten, physical execution engine, uses whole-stage code generation to generate compact code for execution.
+2.  Ease of use
+
+    provides a fundamental abstraction of a simple logical data structure called RDD. provides a set of transformation and actions which offers a simple programming model to build apps in familiar languages.
+3.  Modularity
+
+    Spark SQL, Spark Structured Streaming, Spark MLlib, and GraphX
+4.  Extensibility
+
+    Spark focuses on it's fast, parallel computation engine rather than on storage.
+
+We use APIs to write spark application and spark converts this into a DAG that is executed by the core engine.
+
+
+### The WH Questions {#the-wh-questions}
+
+
+## Chapter 2, Downloading Apache Spark and Getting Started {#chapter-2-downloading-apache-spark-and-getting-started}
+
+
+## Chapter 3, Apache Spark’s Structured APIs through Chapter 6, Spark SQL and Datasets {#chapter-3-apache-spark-s-structured-apis-through-chapter-6-spark-sql-and-datasets}
+
+
+## Chapter 7, Optimizing and Tuning Spark Applications {#chapter-7-optimizing-and-tuning-spark-applications}
+
+
+## Chapter 8, Structured Streaming {#chapter-8-structured-streaming}
+
+
+## Chapter 9, Building Reliable Data Lakes with Apache Spark {#chapter-9-building-reliable-data-lakes-with-apache-spark}
+
+
+## Chapter 10, Machine Learning with MLlib {#chapter-10-machine-learning-with-mllib}
+
+
+## Chapter 11, Managing, Deploying, and Scaling Machine Learning Pipelines with Apache Spark {#chapter-11-managing-deploying-and-scaling-machine-learning-pipelines-with-apache-spark}
+
+
+## Chapter 12, Epilogue: Apache Spark 3.0 {#chapter-12-epilogue-apache-spark-3-dot-0}
