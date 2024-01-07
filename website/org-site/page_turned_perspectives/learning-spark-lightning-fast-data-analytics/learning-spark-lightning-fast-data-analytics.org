@@ -18,16 +18,27 @@ common algorithms to build distributed machine learning models. This book covers
 how to build pipelines with MLlib, best practices for distributed machine learning, how to use Spark to scale single-node models, and how to manage and deploy these models using the open source library *MLflow*.
 #+END_QUOTE
 
-* Chapter 1, Introduction to Apache Spark: A Unified Analytics Engine
+* Chapter 1: Introduction to Apache Spark: A Unified Analytics Engine
 #+INCLUDE: "chapter1.org"
 
-* Chapter 2, Downloading Apache Spark and Getting Started
+* Chapter 2: Downloading Apache Spark and Getting Started
 #+INCLUDE: "chapter2.org"
 
-* Chapter 3, Apache Spark’s Structured APIs through Chapter 6, Spark SQL and Datasets
-* Chapter 7, Optimizing and Tuning Spark Applications
-* Chapter 8, Structured Streaming
-* Chapter 9, Building Reliable Data Lakes with Apache Spark
-* Chapter 10, Machine Learning with MLlib
-* Chapter 11, Managing, Deploying, and Scaling Machine Learning Pipelines with Apache Spark
-* Chapter 12, Epilogue: Apache Spark 3.0
+* Chapter 3: Apache Spark’s Structured APIs
+#+INCLUDE: "chapter3.org"
+
+* Chapter 4: Spark SQL and DataFrames: Introduction to Built-in Data Sources
+
+This chapter is all about reading and writing files in different format.
+
+Parquet is the default data source in Spark. (Parquet is also the default table open format for Delta Lake(Parquet is also the default table open format for Delta
+Lake)
+
+* Chapter 5: Spark SQL and DataFrames: Interacting with External Data Sources
+* Chapter 6:
+* Chapter 7: Optimizing and Tuning Spark Applications
+* Chapter 8: Structured Streaming
+* Chapter 9: Building Reliable Data Lakes with Apache Spark
+* Chapter 10: Machine Learning with MLlib
+* Chapter 11: Managing, Deploying, and Scaling Machine Learning Pipelines with Apache Spark
+* Chapter 12: Epilogue: Apache Spark 3.0

@@ -18,7 +18,7 @@ draft = false
 > how to build pipelines with MLlib, best practices for distributed machine learning, how to use Spark to scale single-node models, and how to manage and deploy these models using the open source library **MLflow**.
 
 
-## Chapter 1, Introduction to Apache Spark: A Unified Analytics Engine {#chapter-1-introduction-to-apache-spark-a-unified-analytics-engine}
+## Chapter 1: Introduction to Apache Spark: A Unified Analytics Engine {#chapter-1-introduction-to-apache-spark-a-unified-analytics-engine}
 
 > 1.  A Unified Analytics Engine
 > 2.  It's genesis, inspiration and adoption
@@ -95,7 +95,7 @@ Partitioning allows for efficient parallelism. A distributed scheme of breaking 
 -   what deployment modes are available?
 
 
-## Chapter 2, Downloading Apache Spark and Getting Started {#chapter-2-downloading-apache-spark-and-getting-started}
+## Chapter 2: Downloading Apache Spark and Getting Started {#chapter-2-downloading-apache-spark-and-getting-started}
 
 Spark computations are expressed as operations.
 These operations are then converted into low-level RDD-based bytecode as tasks,
@@ -127,6 +127,8 @@ Another example of an operator that dictates data transfer among Spark executors
 
 ---
 
+As such, an executor with 16 cores can have 16 or more tasks working on 16 or more partitions in parallel, making the execution of Spark’s tasks exceedingly parallel!
+
 
 ### The WH Questions {#the-wh-questions}
 
@@ -145,22 +147,36 @@ Another example of an operator that dictates data transfer among Spark executors
     A single unit of work or execution that will be sent to a Spark executor.
 
 
-## Chapter 3, Apache Spark’s Structured APIs through Chapter 6, Spark SQL and Datasets {#chapter-3-apache-spark-s-structured-apis-through-chapter-6-spark-sql-and-datasets}
+## Chapter 3: Apache Spark’s Structured APIs {#chapter-3-apache-spark-s-structured-apis}
 
 
-## Chapter 7, Optimizing and Tuning Spark Applications {#chapter-7-optimizing-and-tuning-spark-applications}
+## Chapter 4: Spark SQL and DataFrames: Introduction to Built-in Data Sources {#chapter-4-spark-sql-and-dataframes-introduction-to-built-in-data-sources}
+
+This chapter is all about reading and writing files in different format.
+
+Parquet is the default data source in Spark. (Parquet is also the default table open format for Delta Lake(Parquet is also the default table open format for Delta
+Lake)
 
 
-## Chapter 8, Structured Streaming {#chapter-8-structured-streaming}
+## Chapter 5: {#chapter-5}
 
 
-## Chapter 9, Building Reliable Data Lakes with Apache Spark {#chapter-9-building-reliable-data-lakes-with-apache-spark}
+## Chapter 6: {#chapter-6}
 
 
-## Chapter 10, Machine Learning with MLlib {#chapter-10-machine-learning-with-mllib}
+## Chapter 7: Optimizing and Tuning Spark Applications {#chapter-7-optimizing-and-tuning-spark-applications}
 
 
-## Chapter 11, Managing, Deploying, and Scaling Machine Learning Pipelines with Apache Spark {#chapter-11-managing-deploying-and-scaling-machine-learning-pipelines-with-apache-spark}
+## Chapter 8: Structured Streaming {#chapter-8-structured-streaming}
 
 
-## Chapter 12, Epilogue: Apache Spark 3.0 {#chapter-12-epilogue-apache-spark-3-dot-0}
+## Chapter 9: Building Reliable Data Lakes with Apache Spark {#chapter-9-building-reliable-data-lakes-with-apache-spark}
+
+
+## Chapter 10: Machine Learning with MLlib {#chapter-10-machine-learning-with-mllib}
+
+
+## Chapter 11: Managing, Deploying, and Scaling Machine Learning Pipelines with Apache Spark {#chapter-11-managing-deploying-and-scaling-machine-learning-pipelines-with-apache-spark}
+
+
+## Chapter 12: Epilogue: Apache Spark 3.0 {#chapter-12-epilogue-apache-spark-3-dot-0}
