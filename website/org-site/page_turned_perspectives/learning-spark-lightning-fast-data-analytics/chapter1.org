@@ -1,24 +1,3 @@
-#+title:Learning Spark: Lightning-Fast Data Analytics
-#+description: Book Review - Build your pipelines with Apache Airflow
-#+author: r_hasan
-#+date:<2024-01-05 Fri>
-#+hugo_base_dir: ../../
-
-
-#+BEGIN_QUOTE
-***data engineers*** will learn how to use *Spark’s Structured APIs* to perform
-complex data exploration and analysis on both batch and streaming data; use *Spark
-SQL* for interactive queries; use Spark’s built-in and external *data sources* to read,
-refine, and write data in different file formats as part of their extract, transform, and
-load (ETL) tasks; and build reliable data lakes with Spark and the open source *Delta
-Lake table format*.
-
-for ***data scientists and machine learning engineers***, Spark’s *MLlib library* offers many
-common algorithms to build distributed machine learning models. This book covers
-how to build pipelines with MLlib, best practices for distributed machine learning, how to use Spark to scale single-node models, and how to manage and deploy these models using the open source library *MLflow*.
-#+END_QUOTE
-
-* Chapter 1, Introduction to Apache Spark: A Unified Analytics Engine
 #+BEGIN_QUOTE
 1. A Unified Analytics Engine
 2. It's genesis, inspiration and adoption
@@ -88,12 +67,3 @@ Partitioning allows for efficient parallelism. A distributed scheme of breaking 
 - what is apache spark?
 - how all the components of Spark’s distributed architecture work together and communicate?
 - what deployment modes are available?
-
-* Chapter 2, Downloading Apache Spark and Getting Started
-* Chapter 3, Apache Spark’s Structured APIs through Chapter 6, Spark SQL and Datasets
-* Chapter 7, Optimizing and Tuning Spark Applications
-* Chapter 8, Structured Streaming
-* Chapter 9, Building Reliable Data Lakes with Apache Spark
-* Chapter 10, Machine Learning with MLlib
-* Chapter 11, Managing, Deploying, and Scaling Machine Learning Pipelines with Apache Spark
-* Chapter 12, Epilogue: Apache Spark 3.0

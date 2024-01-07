@@ -2,7 +2,7 @@
 #+description: Book Review - Build your pipelines with Apache Airflow
 #+author: r_hasan
 #+date:<2024-01-02 Tue> 
-#+hugo_base_dir: ../../
+#+hugo_base_dir: ../../../
 
 * Insights
 - Airflow requires all tasks upstream of a given task to complete successfully before that the task itself can be executed

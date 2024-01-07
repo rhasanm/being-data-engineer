@@ -97,6 +97,53 @@ Partitioning allows for efficient parallelism. A distributed scheme of breaking 
 
 ## Chapter 2, Downloading Apache Spark and Getting Started {#chapter-2-downloading-apache-spark-and-getting-started}
 
+Spark computations are expressed as operations.
+These operations are then converted into low-level RDD-based bytecode as tasks,
+which are distributed to Spark’s executors for execution.
+
+since Spark 2.x, RDDs are now consigned to low-level APIs
+
+Every computation expressed in high-level Structured APIs is
+decomposed into low-level optimized and generated RDD opera‐
+tions and then converted into Scala bytecode for the executors’
+JVMs. This generated RDD operation code is not accessible to
+users, nor is it the same as the user-facing RDD APIs
+
+**important terms**:
+
+-   Applicaton
+-   SparkSession
+-   Job
+-   Stage
+-   Task
+
+---
+
+Often stages are delineated on the operator’s computation boundaries, where they dictate data transfer among Spark executors.
+
+One example of an operator that dictates data transfer among Spark executors is the shuffle operation. Shuffle operations occur when data needs to be redistributed across the cluster, such as when performing a join or a group-by operation. Shuffle operations create new stages, where the tasks in the previous stage write their output to local disk and the tasks in the next stage read the data from the remote executors.
+
+Another example of an operator that dictates data transfer among Spark executors is the broadcast operation. Broadcast operations occur when a small amount of data needs to be sent to all the executors, such as when performing a broadcast join or a broadcast variable. Broadcast operations create new stages, where the tasks in the previous stage send their output to the driver and the driver broadcasts the data to the tasks in the next stage.
+
+---
+
+
+### The WH Questions {#the-wh-questions}
+
+-   how the code is transofrmed and executed as tasks across the spark executors?
+-   What is SparkSession?
+
+    An object that provides a point of entry to interact with underlying Spark functionality and allows programming Spark with its APIs.
+-   What is Job?
+
+    A parallel computation consisting of multiple tasks that gets spawned in response to a Spark action (e.g., save(), collect()).
+-   what is Stage?
+
+    Each job gets divided into smaller sets of tasks called stages that depend on each other.
+-   What is a Task?
+
+    A single unit of work or execution that will be sent to a Spark executor.
+
 
 ## Chapter 3, Apache Spark’s Structured APIs through Chapter 6, Spark SQL and Datasets {#chapter-3-apache-spark-s-structured-apis-through-chapter-6-spark-sql-and-datasets}
 
